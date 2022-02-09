@@ -1,37 +1,1284 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.8.10 on linux)" generated="20220207 02:09:34.541" rpa="false" schemaversion="2">
-<suite id="s1" name="Hello World" source="/home/przemek/PycharmProjects/zajecia_testowanie/hello_world.robot">
-<test id="s1-t1" name="123">
-<kw name="Add 5 To" library="operations">
+<robot generator="Robot 4.1.3 (Python 3.8.10 on linux)" generated="20220208 02:56:06.473" rpa="false" schemaversion="2">
+<suite id="s1" name="Calc" source="/home/przemek/PycharmProjects/zajecia_testowanie/calc.robot">
+<test id="s1-t1" name="Test Fibonacci">
+<kw name="Fibonacci">
 <var>${x}</var>
-<arg>6</arg>
-<kw name="Evaluate" library="BuiltIn">
-<var>${result}</var>
-<arg>5+${n}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20220207 02:09:34.567" level="INFO">${result} = 11</msg>
-<status status="PASS" starttime="20220207 02:09:34.567" endtime="20220207 02:09:34.567"/>
+<arg>10</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-2}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.497" level="INFO">${f-2} = 0</msg>
+<status status="PASS" starttime="20220208 02:56:06.497" endtime="20220208 02:56:06.497"/>
 </kw>
-<msg timestamp="20220207 02:09:34.568" level="INFO">${x} = 11</msg>
-<status status="PASS" starttime="20220207 02:09:34.566" endtime="20220207 02:09:34.568"/>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-1}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.497" level="INFO">${f-1} = 1</msg>
+<status status="PASS" starttime="20220208 02:56:06.497" endtime="20220208 02:56:06.497"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${_}</var>
+<value>${n}-1</value>
+<iter>
+<var name="${_}">0</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${f}</var>
+<arg>${f-2}+${f-1}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.498" level="INFO">${f} = 1</msg>
+<status status="PASS" starttime="20220208 02:56:06.498" endtime="20220208 02:56:06.498"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-2}</var>
+<arg>${f-1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.499" level="INFO">${f-2} = 1</msg>
+<status status="PASS" starttime="20220208 02:56:06.499" endtime="20220208 02:56:06.499"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-1}</var>
+<arg>${f}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.499" level="INFO">${f-1} = 1</msg>
+<status status="PASS" starttime="20220208 02:56:06.499" endtime="20220208 02:56:06.499"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${f}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.499" endtime="20220208 02:56:06.499"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.498" endtime="20220208 02:56:06.500"/>
+</iter>
+<iter>
+<var name="${_}">1</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${f}</var>
+<arg>${f-2}+${f-1}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.500" level="INFO">${f} = 2</msg>
+<status status="PASS" starttime="20220208 02:56:06.500" endtime="20220208 02:56:06.500"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-2}</var>
+<arg>${f-1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.500" level="INFO">${f-2} = 1</msg>
+<status status="PASS" starttime="20220208 02:56:06.500" endtime="20220208 02:56:06.500"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-1}</var>
+<arg>${f}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.501" level="INFO">${f-1} = 2</msg>
+<status status="PASS" starttime="20220208 02:56:06.501" endtime="20220208 02:56:06.501"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${f}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.501" endtime="20220208 02:56:06.501"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.500" endtime="20220208 02:56:06.501"/>
+</iter>
+<iter>
+<var name="${_}">2</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${f}</var>
+<arg>${f-2}+${f-1}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.502" level="INFO">${f} = 3</msg>
+<status status="PASS" starttime="20220208 02:56:06.501" endtime="20220208 02:56:06.502"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-2}</var>
+<arg>${f-1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.502" level="INFO">${f-2} = 2</msg>
+<status status="PASS" starttime="20220208 02:56:06.502" endtime="20220208 02:56:06.502"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-1}</var>
+<arg>${f}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.502" level="INFO">${f-1} = 3</msg>
+<status status="PASS" starttime="20220208 02:56:06.502" endtime="20220208 02:56:06.503"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${f}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.503" endtime="20220208 02:56:06.503"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.501" endtime="20220208 02:56:06.503"/>
+</iter>
+<iter>
+<var name="${_}">3</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${f}</var>
+<arg>${f-2}+${f-1}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.504" level="INFO">${f} = 5</msg>
+<status status="PASS" starttime="20220208 02:56:06.503" endtime="20220208 02:56:06.504"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-2}</var>
+<arg>${f-1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.504" level="INFO">${f-2} = 3</msg>
+<status status="PASS" starttime="20220208 02:56:06.504" endtime="20220208 02:56:06.504"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-1}</var>
+<arg>${f}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.505" level="INFO">${f-1} = 5</msg>
+<status status="PASS" starttime="20220208 02:56:06.504" endtime="20220208 02:56:06.505"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${f}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.505" endtime="20220208 02:56:06.505"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.503" endtime="20220208 02:56:06.505"/>
+</iter>
+<iter>
+<var name="${_}">4</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${f}</var>
+<arg>${f-2}+${f-1}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.506" level="INFO">${f} = 8</msg>
+<status status="PASS" starttime="20220208 02:56:06.506" endtime="20220208 02:56:06.506"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-2}</var>
+<arg>${f-1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.506" level="INFO">${f-2} = 5</msg>
+<status status="PASS" starttime="20220208 02:56:06.506" endtime="20220208 02:56:06.506"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-1}</var>
+<arg>${f}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.507" level="INFO">${f-1} = 8</msg>
+<status status="PASS" starttime="20220208 02:56:06.506" endtime="20220208 02:56:06.507"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${f}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.507" endtime="20220208 02:56:06.507"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.505" endtime="20220208 02:56:06.507"/>
+</iter>
+<iter>
+<var name="${_}">5</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${f}</var>
+<arg>${f-2}+${f-1}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.508" level="INFO">${f} = 13</msg>
+<status status="PASS" starttime="20220208 02:56:06.507" endtime="20220208 02:56:06.508"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-2}</var>
+<arg>${f-1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.508" level="INFO">${f-2} = 8</msg>
+<status status="PASS" starttime="20220208 02:56:06.508" endtime="20220208 02:56:06.508"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-1}</var>
+<arg>${f}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.509" level="INFO">${f-1} = 13</msg>
+<status status="PASS" starttime="20220208 02:56:06.509" endtime="20220208 02:56:06.509"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${f}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.509" endtime="20220208 02:56:06.509"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.507" endtime="20220208 02:56:06.509"/>
+</iter>
+<iter>
+<var name="${_}">6</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${f}</var>
+<arg>${f-2}+${f-1}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.510" level="INFO">${f} = 21</msg>
+<status status="PASS" starttime="20220208 02:56:06.509" endtime="20220208 02:56:06.510"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-2}</var>
+<arg>${f-1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.510" level="INFO">${f-2} = 13</msg>
+<status status="PASS" starttime="20220208 02:56:06.510" endtime="20220208 02:56:06.510"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-1}</var>
+<arg>${f}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.510" level="INFO">${f-1} = 21</msg>
+<status status="PASS" starttime="20220208 02:56:06.510" endtime="20220208 02:56:06.510"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${f}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.511" endtime="20220208 02:56:06.511"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.509" endtime="20220208 02:56:06.511"/>
+</iter>
+<iter>
+<var name="${_}">7</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${f}</var>
+<arg>${f-2}+${f-1}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.511" level="INFO">${f} = 34</msg>
+<status status="PASS" starttime="20220208 02:56:06.511" endtime="20220208 02:56:06.511"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-2}</var>
+<arg>${f-1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.512" level="INFO">${f-2} = 21</msg>
+<status status="PASS" starttime="20220208 02:56:06.512" endtime="20220208 02:56:06.512"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-1}</var>
+<arg>${f}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.512" level="INFO">${f-1} = 34</msg>
+<status status="PASS" starttime="20220208 02:56:06.512" endtime="20220208 02:56:06.512"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${f}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.512" endtime="20220208 02:56:06.512"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.511" endtime="20220208 02:56:06.513"/>
+</iter>
+<iter>
+<var name="${_}">8</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${f}</var>
+<arg>${f-2}+${f-1}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.513" level="INFO">${f} = 55</msg>
+<status status="PASS" starttime="20220208 02:56:06.513" endtime="20220208 02:56:06.513"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-2}</var>
+<arg>${f-1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.514" level="INFO">${f-2} = 34</msg>
+<status status="PASS" starttime="20220208 02:56:06.513" endtime="20220208 02:56:06.514"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${f-1}</var>
+<arg>${f}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220208 02:56:06.514" level="INFO">${f-1} = 55</msg>
+<status status="PASS" starttime="20220208 02:56:06.514" endtime="20220208 02:56:06.514"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${f}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.514" endtime="20220208 02:56:06.515"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.513" endtime="20220208 02:56:06.515"/>
+</iter>
+<status status="PASS" starttime="20220208 02:56:06.498" endtime="20220208 02:56:06.515"/>
+</for>
+<msg timestamp="20220208 02:56:06.515" level="INFO">${x} = 55</msg>
+<status status="PASS" starttime="20220208 02:56:06.496" endtime="20220208 02:56:06.516"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${x}</arg>
+<arg>55</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20220208 02:56:06.517" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20220208 02:56:06.516" endtime="20220208 02:56:06.517"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.496" endtime="20220208 02:56:06.517"/>
+</test>
+<test id="s1-t2" name="Test that Collatz Conjecture works for numbers 1 to 100">
+<kw name="Collatz Conjecture">
+<var>${x}</var>
+<arg>72</arg>
+<for flavor="IN RANGE">
+<var>${_}</var>
+<value>999</value>
+<iter>
+<var name="${_}">0</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.522" level="INFO">${x} = 36</msg>
+<status status="PASS" starttime="20220208 02:56:06.521" endtime="20220208 02:56:06.522"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.521" endtime="20220208 02:56:06.522"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.522" endtime="20220208 02:56:06.522"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.522" endtime="20220208 02:56:06.522"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.520" endtime="20220208 02:56:06.522"/>
+</if>
+<msg timestamp="20220208 02:56:06.523" level="INFO">${x} = 36</msg>
+<status status="PASS" starttime="20220208 02:56:06.520" endtime="20220208 02:56:06.523"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.523" endtime="20220208 02:56:06.524"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${x}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220207 02:09:34.568" endtime="20220207 02:09:34.568"/>
+<status status="PASS" starttime="20220208 02:56:06.524" endtime="20220208 02:56:06.526"/>
 </kw>
-<status status="PASS" starttime="20220207 02:09:34.565" endtime="20220207 02:09:34.569"/>
+<status status="PASS" starttime="20220208 02:56:06.520" endtime="20220208 02:56:06.526"/>
+</iter>
+<iter>
+<var name="${_}">1</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.528" level="INFO">${x} = 18</msg>
+<status status="PASS" starttime="20220208 02:56:06.527" endtime="20220208 02:56:06.528"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.527" endtime="20220208 02:56:06.528"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.528" endtime="20220208 02:56:06.528"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.528" endtime="20220208 02:56:06.528"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.527" endtime="20220208 02:56:06.528"/>
+</if>
+<msg timestamp="20220208 02:56:06.528" level="INFO">${x} = 18</msg>
+<status status="PASS" starttime="20220208 02:56:06.527" endtime="20220208 02:56:06.528"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.528" endtime="20220208 02:56:06.529"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.529" endtime="20220208 02:56:06.529"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.526" endtime="20220208 02:56:06.529"/>
+</iter>
+<iter>
+<var name="${_}">2</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.530" level="INFO">${x} = 9</msg>
+<status status="PASS" starttime="20220208 02:56:06.530" endtime="20220208 02:56:06.530"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.530" endtime="20220208 02:56:06.530"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.530" endtime="20220208 02:56:06.530"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.530" endtime="20220208 02:56:06.530"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.530" endtime="20220208 02:56:06.530"/>
+</if>
+<msg timestamp="20220208 02:56:06.531" level="INFO">${x} = 9</msg>
+<status status="PASS" starttime="20220208 02:56:06.529" endtime="20220208 02:56:06.531"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.531" endtime="20220208 02:56:06.531"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.531" endtime="20220208 02:56:06.531"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.529" endtime="20220208 02:56:06.531"/>
+</iter>
+<iter>
+<var name="${_}">3</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.532" endtime="20220208 02:56:06.532"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.532" endtime="20220208 02:56:06.532"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.533" level="INFO">${x} = 28</msg>
+<status status="PASS" starttime="20220208 02:56:06.533" endtime="20220208 02:56:06.533"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.532" endtime="20220208 02:56:06.533"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.532" endtime="20220208 02:56:06.533"/>
+</if>
+<msg timestamp="20220208 02:56:06.533" level="INFO">${x} = 28</msg>
+<status status="PASS" starttime="20220208 02:56:06.532" endtime="20220208 02:56:06.533"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.533" endtime="20220208 02:56:06.534"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.534" endtime="20220208 02:56:06.534"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.532" endtime="20220208 02:56:06.534"/>
+</iter>
+<iter>
+<var name="${_}">4</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.536" level="INFO">${x} = 14</msg>
+<status status="PASS" starttime="20220208 02:56:06.535" endtime="20220208 02:56:06.536"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.535" endtime="20220208 02:56:06.536"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.536" endtime="20220208 02:56:06.536"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.536" endtime="20220208 02:56:06.536"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.535" endtime="20220208 02:56:06.536"/>
+</if>
+<msg timestamp="20220208 02:56:06.536" level="INFO">${x} = 14</msg>
+<status status="PASS" starttime="20220208 02:56:06.535" endtime="20220208 02:56:06.536"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.536" endtime="20220208 02:56:06.537"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.537" endtime="20220208 02:56:06.537"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.534" endtime="20220208 02:56:06.537"/>
+</iter>
+<iter>
+<var name="${_}">5</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.538" level="INFO">${x} = 7</msg>
+<status status="PASS" starttime="20220208 02:56:06.538" endtime="20220208 02:56:06.538"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.538" endtime="20220208 02:56:06.538"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.538" endtime="20220208 02:56:06.539"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.538" endtime="20220208 02:56:06.539"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.538" endtime="20220208 02:56:06.539"/>
+</if>
+<msg timestamp="20220208 02:56:06.539" level="INFO">${x} = 7</msg>
+<status status="PASS" starttime="20220208 02:56:06.537" endtime="20220208 02:56:06.539"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.539" endtime="20220208 02:56:06.539"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.539" endtime="20220208 02:56:06.540"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.537" endtime="20220208 02:56:06.540"/>
+</iter>
+<iter>
+<var name="${_}">6</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.541" endtime="20220208 02:56:06.541"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.540" endtime="20220208 02:56:06.541"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.541" level="INFO">${x} = 22</msg>
+<status status="PASS" starttime="20220208 02:56:06.541" endtime="20220208 02:56:06.541"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.541" endtime="20220208 02:56:06.541"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.540" endtime="20220208 02:56:06.541"/>
+</if>
+<msg timestamp="20220208 02:56:06.541" level="INFO">${x} = 22</msg>
+<status status="PASS" starttime="20220208 02:56:06.540" endtime="20220208 02:56:06.541"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.542" endtime="20220208 02:56:06.542"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.542" endtime="20220208 02:56:06.542"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.540" endtime="20220208 02:56:06.542"/>
+</iter>
+<iter>
+<var name="${_}">7</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.543" level="INFO">${x} = 11</msg>
+<status status="PASS" starttime="20220208 02:56:06.543" endtime="20220208 02:56:06.543"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.543" endtime="20220208 02:56:06.543"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.544" endtime="20220208 02:56:06.544"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.543" endtime="20220208 02:56:06.544"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.543" endtime="20220208 02:56:06.544"/>
+</if>
+<msg timestamp="20220208 02:56:06.544" level="INFO">${x} = 11</msg>
+<status status="PASS" starttime="20220208 02:56:06.543" endtime="20220208 02:56:06.544"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.544" endtime="20220208 02:56:06.545"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.545" endtime="20220208 02:56:06.545"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.542" endtime="20220208 02:56:06.545"/>
+</iter>
+<iter>
+<var name="${_}">8</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.546" endtime="20220208 02:56:06.546"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.546" endtime="20220208 02:56:06.547"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.547" level="INFO">${x} = 34</msg>
+<status status="PASS" starttime="20220208 02:56:06.547" endtime="20220208 02:56:06.547"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.547" endtime="20220208 02:56:06.547"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.546" endtime="20220208 02:56:06.547"/>
+</if>
+<msg timestamp="20220208 02:56:06.547" level="INFO">${x} = 34</msg>
+<status status="PASS" starttime="20220208 02:56:06.546" endtime="20220208 02:56:06.547"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.547" endtime="20220208 02:56:06.548"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.548" endtime="20220208 02:56:06.548"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.545" endtime="20220208 02:56:06.548"/>
+</iter>
+<iter>
+<var name="${_}">9</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.549" level="INFO">${x} = 17</msg>
+<status status="PASS" starttime="20220208 02:56:06.549" endtime="20220208 02:56:06.549"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.549" endtime="20220208 02:56:06.549"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.550" endtime="20220208 02:56:06.550"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.550" endtime="20220208 02:56:06.550"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.549" endtime="20220208 02:56:06.550"/>
+</if>
+<msg timestamp="20220208 02:56:06.550" level="INFO">${x} = 17</msg>
+<status status="PASS" starttime="20220208 02:56:06.548" endtime="20220208 02:56:06.550"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.550" endtime="20220208 02:56:06.551"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.551" endtime="20220208 02:56:06.551"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.548" endtime="20220208 02:56:06.551"/>
+</iter>
+<iter>
+<var name="${_}">10</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.552" endtime="20220208 02:56:06.552"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.552" endtime="20220208 02:56:06.552"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.552" level="INFO">${x} = 52</msg>
+<status status="PASS" starttime="20220208 02:56:06.552" endtime="20220208 02:56:06.552"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.552" endtime="20220208 02:56:06.552"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.552" endtime="20220208 02:56:06.553"/>
+</if>
+<msg timestamp="20220208 02:56:06.553" level="INFO">${x} = 52</msg>
+<status status="PASS" starttime="20220208 02:56:06.551" endtime="20220208 02:56:06.553"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.553" endtime="20220208 02:56:06.553"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.553" endtime="20220208 02:56:06.553"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.551" endtime="20220208 02:56:06.554"/>
+</iter>
+<iter>
+<var name="${_}">11</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.555" level="INFO">${x} = 26</msg>
+<status status="PASS" starttime="20220208 02:56:06.554" endtime="20220208 02:56:06.555"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.554" endtime="20220208 02:56:06.555"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.555" endtime="20220208 02:56:06.555"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.555" endtime="20220208 02:56:06.555"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.554" endtime="20220208 02:56:06.555"/>
+</if>
+<msg timestamp="20220208 02:56:06.555" level="INFO">${x} = 26</msg>
+<status status="PASS" starttime="20220208 02:56:06.554" endtime="20220208 02:56:06.555"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.555" endtime="20220208 02:56:06.556"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.556" endtime="20220208 02:56:06.556"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.554" endtime="20220208 02:56:06.556"/>
+</iter>
+<iter>
+<var name="${_}">12</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.557" level="INFO">${x} = 13</msg>
+<status status="PASS" starttime="20220208 02:56:06.557" endtime="20220208 02:56:06.557"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.557" endtime="20220208 02:56:06.557"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.557" endtime="20220208 02:56:06.557"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.557" endtime="20220208 02:56:06.557"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.557" endtime="20220208 02:56:06.557"/>
+</if>
+<msg timestamp="20220208 02:56:06.558" level="INFO">${x} = 13</msg>
+<status status="PASS" starttime="20220208 02:56:06.556" endtime="20220208 02:56:06.558"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.558" endtime="20220208 02:56:06.558"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.558" endtime="20220208 02:56:06.558"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.556" endtime="20220208 02:56:06.559"/>
+</iter>
+<iter>
+<var name="${_}">13</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.559" endtime="20220208 02:56:06.559"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.559" endtime="20220208 02:56:06.559"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.560" level="INFO">${x} = 40</msg>
+<status status="PASS" starttime="20220208 02:56:06.560" endtime="20220208 02:56:06.560"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.559" endtime="20220208 02:56:06.560"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.559" endtime="20220208 02:56:06.560"/>
+</if>
+<msg timestamp="20220208 02:56:06.560" level="INFO">${x} = 40</msg>
+<status status="PASS" starttime="20220208 02:56:06.559" endtime="20220208 02:56:06.560"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.560" endtime="20220208 02:56:06.561"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.561" endtime="20220208 02:56:06.561"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.559" endtime="20220208 02:56:06.561"/>
+</iter>
+<iter>
+<var name="${_}">14</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.562" level="INFO">${x} = 20</msg>
+<status status="PASS" starttime="20220208 02:56:06.562" endtime="20220208 02:56:06.562"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.562" endtime="20220208 02:56:06.562"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.562" endtime="20220208 02:56:06.562"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.562" endtime="20220208 02:56:06.562"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.562" endtime="20220208 02:56:06.562"/>
+</if>
+<msg timestamp="20220208 02:56:06.563" level="INFO">${x} = 20</msg>
+<status status="PASS" starttime="20220208 02:56:06.561" endtime="20220208 02:56:06.563"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.563" endtime="20220208 02:56:06.563"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.563" endtime="20220208 02:56:06.563"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.561" endtime="20220208 02:56:06.564"/>
+</iter>
+<iter>
+<var name="${_}">15</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.565" level="INFO">${x} = 10</msg>
+<status status="PASS" starttime="20220208 02:56:06.565" endtime="20220208 02:56:06.565"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.564" endtime="20220208 02:56:06.565"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.565" endtime="20220208 02:56:06.565"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.565" endtime="20220208 02:56:06.565"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.564" endtime="20220208 02:56:06.565"/>
+</if>
+<msg timestamp="20220208 02:56:06.566" level="INFO">${x} = 10</msg>
+<status status="PASS" starttime="20220208 02:56:06.564" endtime="20220208 02:56:06.566"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.566" endtime="20220208 02:56:06.566"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.566" endtime="20220208 02:56:06.566"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.564" endtime="20220208 02:56:06.567"/>
+</iter>
+<iter>
+<var name="${_}">16</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.568" level="INFO">${x} = 5</msg>
+<status status="PASS" starttime="20220208 02:56:06.568" endtime="20220208 02:56:06.568"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.568" endtime="20220208 02:56:06.568"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.568" endtime="20220208 02:56:06.568"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.568" endtime="20220208 02:56:06.568"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.567" endtime="20220208 02:56:06.568"/>
+</if>
+<msg timestamp="20220208 02:56:06.569" level="INFO">${x} = 5</msg>
+<status status="PASS" starttime="20220208 02:56:06.567" endtime="20220208 02:56:06.569"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.569" endtime="20220208 02:56:06.569"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.569" endtime="20220208 02:56:06.570"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.567" endtime="20220208 02:56:06.570"/>
+</iter>
+<iter>
+<var name="${_}">17</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.571" endtime="20220208 02:56:06.571"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.571" endtime="20220208 02:56:06.571"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.571" level="INFO">${x} = 16</msg>
+<status status="PASS" starttime="20220208 02:56:06.571" endtime="20220208 02:56:06.571"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.571" endtime="20220208 02:56:06.571"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.570" endtime="20220208 02:56:06.571"/>
+</if>
+<msg timestamp="20220208 02:56:06.572" level="INFO">${x} = 16</msg>
+<status status="PASS" starttime="20220208 02:56:06.570" endtime="20220208 02:56:06.572"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.572" endtime="20220208 02:56:06.572"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.572" endtime="20220208 02:56:06.573"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.570" endtime="20220208 02:56:06.573"/>
+</iter>
+<iter>
+<var name="${_}">18</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.574" level="INFO">${x} = 8</msg>
+<status status="PASS" starttime="20220208 02:56:06.574" endtime="20220208 02:56:06.574"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.573" endtime="20220208 02:56:06.574"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.574" endtime="20220208 02:56:06.574"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.574" endtime="20220208 02:56:06.574"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.573" endtime="20220208 02:56:06.574"/>
+</if>
+<msg timestamp="20220208 02:56:06.575" level="INFO">${x} = 8</msg>
+<status status="PASS" starttime="20220208 02:56:06.573" endtime="20220208 02:56:06.575"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.575" endtime="20220208 02:56:06.575"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.575" endtime="20220208 02:56:06.576"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.573" endtime="20220208 02:56:06.576"/>
+</iter>
+<iter>
+<var name="${_}">19</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.577" level="INFO">${x} = 4</msg>
+<status status="PASS" starttime="20220208 02:56:06.576" endtime="20220208 02:56:06.577"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.576" endtime="20220208 02:56:06.577"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.577" endtime="20220208 02:56:06.577"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.577" endtime="20220208 02:56:06.577"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.576" endtime="20220208 02:56:06.577"/>
+</if>
+<msg timestamp="20220208 02:56:06.577" level="INFO">${x} = 4</msg>
+<status status="PASS" starttime="20220208 02:56:06.576" endtime="20220208 02:56:06.577"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.577" endtime="20220208 02:56:06.578"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.578" endtime="20220208 02:56:06.578"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.576" endtime="20220208 02:56:06.578"/>
+</iter>
+<iter>
+<var name="${_}">20</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.579" level="INFO">${x} = 2</msg>
+<status status="PASS" starttime="20220208 02:56:06.579" endtime="20220208 02:56:06.579"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.579" endtime="20220208 02:56:06.579"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.580" endtime="20220208 02:56:06.580"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.579" endtime="20220208 02:56:06.580"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.579" endtime="20220208 02:56:06.580"/>
+</if>
+<msg timestamp="20220208 02:56:06.580" level="INFO">${x} = 2</msg>
+<status status="PASS" starttime="20220208 02:56:06.579" endtime="20220208 02:56:06.580"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220208 02:56:06.580" endtime="20220208 02:56:06.580"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.580" endtime="20220208 02:56:06.581"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.578" endtime="20220208 02:56:06.581"/>
+</iter>
+<iter>
+<var name="${_}">21</var>
+<kw name="Collatz Iteration">
+<var>${x}</var>
+<arg>${x}</arg>
+<doc>If x is even, divide by 2. If x is odd, multply by 3 and add 1.</doc>
+<if>
+<branch type="IF" condition="${x}%2==0">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}//2</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220208 02:56:06.582" level="INFO">${x} = 1</msg>
+<status status="PASS" starttime="20220208 02:56:06.581" endtime="20220208 02:56:06.582"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.581" endtime="20220208 02:56:06.582"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<var>${x}</var>
+<arg>${x}*3+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220208 02:56:06.582" endtime="20220208 02:56:06.582"/>
+</kw>
+<status status="NOT RUN" starttime="20220208 02:56:06.582" endtime="20220208 02:56:06.582"/>
+</branch>
+<status status="PASS" starttime="20220208 02:56:06.581" endtime="20220208 02:56:06.582"/>
+</if>
+<msg timestamp="20220208 02:56:06.582" level="INFO">${x} = 1</msg>
+<status status="PASS" starttime="20220208 02:56:06.581" endtime="20220208 02:56:06.582"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${x}==1</arg>
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<msg timestamp="20220208 02:56:06.583" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220208 02:56:06.582" endtime="20220208 02:56:06.583"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.581" endtime="20220208 02:56:06.583"/>
+</iter>
+<status status="PASS" starttime="20220208 02:56:06.519" endtime="20220208 02:56:06.583"/>
+</for>
+<msg timestamp="20220208 02:56:06.584" level="INFO">${x} = 1</msg>
+<status status="PASS" starttime="20220208 02:56:06.519" endtime="20220208 02:56:06.584"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220208 02:56:06.584" endtime="20220208 02:56:06.584"/>
+</kw>
+<status status="PASS" starttime="20220208 02:56:06.518" endtime="20220208 02:56:06.585"/>
 </test>
-<status status="PASS" starttime="20220207 02:09:34.542" endtime="20220207 02:09:34.570"/>
+<status status="PASS" starttime="20220208 02:56:06.474" endtime="20220208 02:56:06.585"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Hello World">Hello World</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Calc">Calc</stat>
 </suite>
 </statistics>
 <errors>
